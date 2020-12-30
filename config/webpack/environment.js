@@ -8,6 +8,7 @@ environment.plugins.append(
     $: 'jquery',
     jQuery: 'jquery',
     Popper: ['popper.js', 'default'],
+    moment: 'moment/moment',
   }),
 );
 

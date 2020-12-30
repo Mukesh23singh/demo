@@ -15,7 +15,10 @@ require('channels');
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-require('flatpickr/dist/flatpickr.min.css');
+require('bootstrap');
+require('flatpickr');
 
-import flatpickr from 'flatpickr';
-flatpickr('#date', {});
+document.addEventListener('turbolinks:load', () => {
+  $('#date').tooltip(), 13;
+  flatpickr('#date', {});
+});
