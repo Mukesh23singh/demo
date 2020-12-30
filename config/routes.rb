@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :appointments
+  resources :physicians
+  resources :patients
   root to: 'home#index'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
