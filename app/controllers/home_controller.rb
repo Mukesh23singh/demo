@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
 class HomeController < ApplicationController
-  def index
-    @user = User.first
-  end
+  def index; end
 end
