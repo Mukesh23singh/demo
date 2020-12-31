@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 class PhysiciansController < ApplicationController
-  before_action :set_physician, only: [:show, :edit, :update, :destroy]
+  before_action :set_physician, only: %i[show edit update destroy]
 
   # GET /physicians
   # GET /physicians.json
   def index
     @physicians = Physician.all
+    authorize :physician, :index?
   end
 
   # GET /physicians/1
   # GET /physicians/1.json
-  def show
-  end
+  def show; end
 
   # GET /physicians/new
   def new
@@ -18,8 +20,7 @@ class PhysiciansController < ApplicationController
   end
 
   # GET /physicians/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /physicians
   # POST /physicians.json
@@ -62,13 +63,14 @@ class PhysiciansController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_physician
-      @physician = Physician.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def physician_params
-      params.require(:physician).permit(:name)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_physician
+    @physician = Physician.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def physician_params
+    params.require(:physician).permit(:name)
+  end
 end

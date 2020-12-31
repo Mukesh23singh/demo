@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-class AppointmentPolicy
-  attr_reader :user, :appointment
+class PatientPolicy
+  attr_reader :user, :patient
 
-  def initialize(user, appointment)
+  def initialize(user, patient)
     @user = user
-    @post = appointment
+    @post = patient
   end
 
   def update?
