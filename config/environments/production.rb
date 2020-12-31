@@ -114,7 +114,7 @@ Rails.application.configure do
 
   # config/environments/production.rb
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
-  config.action_mailer.default_url_options = { host: host, port: port }
+  config.action_mailer.default_url_options = { host: 'https://hidden-waters-10426.herokuapp.com/' }
 
   ActionMailer::Base.smtp_settings = {
     port: ENV['MAILGUN_SMTP_PORT'],
