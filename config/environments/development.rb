@@ -67,7 +67,7 @@ Rails.application.configure do
     address: ENV['MAILGUN_SMTP_SERVER'],
     user_name: ENV['MAILGUN_SMTP_LOGIN'],
     password: ENV['MAILGUN_SMTP_PASSWORD'],
-    domain: 'https://hidden-waters-10426.herokuapp.com/',
+    domain: 'herokuapp.com/',
     authentication: :plain
   }
   ActionMailer::Base.delivery_method = :smtp
