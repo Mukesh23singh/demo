@@ -31,9 +31,9 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'flatpickr'
-gem 'pundit'
-
 gem 'pg'
+gem 'pundit'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
